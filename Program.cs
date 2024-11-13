@@ -19,7 +19,7 @@
             double price = 123.45;
             int roundedPrice = (int)price; // Explicit conversion from double to int
             Console.WriteLine($"Explicitly casted from double ({price}) to int ({roundedPrice})");
-
+            Console.WriteLine( $"int.MaxValue=> {int.MaxValue}" );  
             long largeValue = 9876543210; // Value exceeds int.MaxValue
             int smallerValue = (int)largeValue; // Explicit conversion with possible data loss
             Console.WriteLine($"Original long value: {largeValue}, After casting to int: {smallerValue}");
@@ -42,6 +42,23 @@
             int age = Convert.ToInt32(ageInput); // Convert string to int
             Console.WriteLine($"Converted string \"{ageInput}\" to int: {age}");
 
+            DateTime dateTime = new DateTime(2024, 11, 13,15,0,0);
+
+            // Convert Year to int
+            int yearAsInt = Convert.ToInt32(dateTime.Year);
+            Console.WriteLine($"Year as int: {yearAsInt}");
+
+            // Convert Month to int
+            int monthAsInt = Convert.ToInt32(dateTime.Month);
+            Console.WriteLine($"Month as int: {monthAsInt}");
+
+            // Convert Day to int
+            int dayAsInt = Convert.ToInt32(dateTime.Day);
+            Console.WriteLine($"Day as int: {dayAsInt}");
+
+            // Convert hour to int
+            int hourAsInt = Convert.ToInt32(dateTime.Hour);
+            Console.WriteLine($"Hour  as int: {hourAsInt}");
             string doubleInput = "123.45";
             double convertedDouble = Convert.ToDouble(doubleInput); // Convert string to double
             Console.WriteLine($"Converted string \"{doubleInput}\" to double: {convertedDouble}");
@@ -73,6 +90,9 @@
             double exactPrice = 49.99;
             int truncatedPrice = (int)exactPrice; // Explicit conversion from double to int
             Console.WriteLine($"Explicit conversion from double ({exactPrice}) to int ({truncatedPrice})");
+
+
+
         }
     }
 }
